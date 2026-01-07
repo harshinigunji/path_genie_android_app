@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF"
+    tools:context=".ExamAddedConfirmationPage">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#F8FAFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roadmap Updated"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomActions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Success Badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_chip_success"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_check"
+                    android:tint="#059669" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADDED TO ROADMAP"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#059669"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exam Added!"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="20dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your roadmap has been updated successfully."
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp" />
+
+            <!-- Added Exam Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_white"
+                android:padding="20dp"
+                android:layout_marginTop="32dp"
+                android:elevation="2dp">
+
+                <!-- Exam Icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_exam"
+                        android:background="@drawable/bg_icon_circle_light"
+                        android:padding="12dp"
+                        app:tint="#2563EB"
+                        android:importantForAccessibility="no" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/examNameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JEE Main"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#111827" />
+
+                        <TextView
+                            android:id="@+id/examTypeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entrance Exam"
+                            android:textSize="14sp"
+                            android:textColor="#6B7280"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_check"
+                        android:tint="#059669" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E5E7EB"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_roadmap"
+                        android:tint="#2563EB" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This exam is now part of your career roadmap"
+                        android:textSize="14sp"
+                        android:textColor="#374151"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Continue Message -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What would you like to do next?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:id="@+id/bottomActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="24dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/exploreNextButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Explore Next"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/exploreJobsButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Explore Jobs"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

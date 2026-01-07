@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aiRoadmapCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_card_gradient_blue"
+    android:padding="16dp"
+    android:layout_marginTop="16dp"
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_icon_circle_white"
+        android:padding="12dp"
+        android:src="@drawable/ic_ai_roadmap" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Roadmap\nGenerator"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Generate a personalized timeline for success."
+            android:textColor="#E0E7FF"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_right_white" />
+
+</LinearLayout>

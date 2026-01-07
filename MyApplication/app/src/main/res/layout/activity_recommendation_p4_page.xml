@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F8FAFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Header -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Recommendations"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="@id/btnBack"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"
+            android:layout_marginStart="12dp"/>
+
+        <!-- Streams Section -->
+        <TextView
+            android:id="@+id/txtStreamsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOMMENDED STREAMS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnBack"/>
+
+        <LinearLayout
+            android:id="@+id/streamsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtStreamsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Stream items will be added dynamically -->
+            <TextView
+                android:id="@+id/txtNoStreams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading streams..."
+                android:textSize="14sp"
+                android:textColor="#64748B"
+                android:gravity="center"
+                android:padding="16dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Exams Section -->
+        <TextView
+            android:id="@+id/txtExamsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOMMENDED EXAMS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/streamsContainer"/>
+
+        <LinearLayout
+            android:id="@+id/examsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtExamsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Exam items will be added dynamically -->
+            <TextView
+                android:id="@+id/txtNoExams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading exams..."
+                android:textSize="14sp"
+                android:textColor="#64748B"
+                android:gravity="center"
+                android:padding="16dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Jobs Section -->
+        <TextView
+            android:id="@+id/txtJobsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECOMMENDED JOBS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/examsContainer"/>
+
+        <LinearLayout
+            android:id="@+id/jobsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txtJobsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Job items will be added dynamically -->
+            <TextView
+                android:id="@+id/txtNoJobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading jobs..."
+                android:textSize="14sp"
+                android:textColor="#64748B"
+                android:gravity="center"
+                android:padding="16dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- Back to Home Button -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Back to Home"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobsContainer"
+            android:layout_margin="16dp"
+            android:layout_marginTop="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

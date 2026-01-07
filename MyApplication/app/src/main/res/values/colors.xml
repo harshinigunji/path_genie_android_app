@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Badge Colors -->
+    <color name="badge_blue">#2563EB</color>
+    <color name="badge_green">#16A34A</color>
+    <color name="badge_purple">#7C3AED</color>
+    <color name="badge_orange">#EA580C</color>
+</resources>

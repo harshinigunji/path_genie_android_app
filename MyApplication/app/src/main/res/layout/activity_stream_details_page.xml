@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF"
+    tools:context=".StreamDetailsPage">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#F8FAFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:id="@+id/contentScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp">
+
+            <!-- Stream Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/streamName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Science (PCM)"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/streamIcon"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_science"
+                    android:background="@drawable/bg_icon_circle_light"
+                    android:padding="12dp"
+                    app:tint="#2563EB"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/streamDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The foundation for engineering and pure sciences, focusing on analytical thinking and problem-solving through Physics, Chemistry, and Mathematics."
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginTop="12dp" />
+
+            <!-- What is this stream? Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_book" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What is this stream?"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/subjectsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A rigorous curriculum centered on Physics, Chemistry, and Maths. It minimizes distraction from other subjects to maximize focus on core scientific principles."
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Skills Gained Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_skill" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skills Gained"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:id="@+id/skillsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:columnCount="2"
+                    android:useDefaultMargins="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Logical Reasoning"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:background="@drawable/bg_chip_light"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Data Analysis"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:background="@drawable/bg_chip_light"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Problem Solving"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:background="@drawable/bg_chip_light"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="Advanced Math"
+                        android:textSize="13sp"
+                        android:textColor="#374151"
+                        android:background="@drawable/bg_chip_light"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:gravity="center" />
+                </GridLayout>
+            </LinearLayout>
+
+            <!-- Duration Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_clock" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duration"
+                        android:textSize="14sp"
+                        android:textColor="#6B7280" />
+
+                    <TextView
+                        android:id="@+id/difficultyLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Higher Secondary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/durationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Years"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827" />
+            </LinearLayout>
+
+            <!-- Who should choose? Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_user" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Who should choose?"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/whoShouldChooseContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- Future Scope Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_trend" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Future Scope"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:id="@+id/futureScopeGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- View Entrance Exam Button -->
+            <Button
+                android:id="@+id/viewEntranceExamButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="📝  View Entrance Exams"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

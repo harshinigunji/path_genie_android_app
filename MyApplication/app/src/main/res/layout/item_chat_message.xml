@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="12dp">
+
+    <!-- Date Header (Optional) -->
+    <TextView
+        android:id="@+id/dateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#E5E7EB"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="Today"
+        android:textColor="#374151"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Bot Message Layout -->
+    <LinearLayout
+        android:id="@+id/botLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="48dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_circle_light"
+            android:padding="6dp"
+            android:src="@drawable/ic_ai_bot"
+            android:layout_gravity="bottom"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Path Genie"
+                android:textSize="12sp"
+                android:textColor="#6B7280"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/botMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chat_bubble_bot"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="12dp"
+                android:text="Hello! How can I help you?"
+                android:textColor="#1F2937"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="4dp"
+                android:elevation="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- User Message Layout -->
+    <LinearLayout
+        android:id="@+id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="48dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/userMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chat_bubble_user"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:text="I need advice."
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4dp"/>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:42 AM"
+        android:textSize="10sp"
+        android:textColor="#9CA3AF"
+        android:fontFamily="sans-serif"
+        android:layout_gravity="end"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

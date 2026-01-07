@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Dynamic Icon Container -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_icon_circle_light">
+
+            <ImageView
+                android:id="@+id/itemIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_graduation"
+                app:tint="#2563EB"/>
+        </FrameLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp">
+
+            <!-- Top Match Badge (Originally programmatically added) -->
+            <TextView
+                android:id="@+id/topMatchBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ TOP MATCH"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#2563EB"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Computer Science"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/itemSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Software, AI, Data"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <!-- Chip for Job Type -->
+            <TextView
+                android:id="@+id/itemChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRIVATE"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#8B5CF6"
+                android:background="@drawable/bg_chip_private"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Score -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/scoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="98%"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2563EB"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Match"
+                android:textSize="10sp"
+                android:textColor="#6B7280"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Side Color Strip -->
+    <View
+        android:id="@+id/colorStrip"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#2563EB"/>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF">
+
+    <!-- Scroll Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="80dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Logo -->
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/ic_path_genie_logo"
+                    android:contentDescription="@string/app_logo"
+                    android:importantForAccessibility="no"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="Path Genie"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"/>
+
+                <!-- Notification Bell -->
+                <FrameLayout
+                    android:id="@+id/notificationBellContainer"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Notifications">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_notification_bell"
+                        android:importantForAccessibility="no"/>
+
+                    <TextView
+                        android:id="@+id/notificationBadge"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/bg_notification_badge"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="10sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+                <!-- Profile Avatar -->
+                <FrameLayout
+                    android:id="@+id/avatarContainer"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/profile">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="22dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/userAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_avatar"
+                            android:importantForAccessibility="no"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/bg_online_dot"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Greeting Section -->
+            <TextView
+                android:id="@+id/greetingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Hi Sarah!"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#111827"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Let's plan your future"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2563EB"/>
+        
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Choose a tool below to continue your journey towards your dream career."
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:lineSpacingExtra="2dp"/>
+
+            <!-- Feature Grid - 2x2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Explore Streams Card -->
+                    <LinearLayout
+                        android:id="@+id/exploreStreamsCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_card_home"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_icon_circle_light"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_edit_blue"
+                            android:importantForAccessibility="no"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Explore\nStreams"
+                            android:textColor="#111827"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:lineSpacingExtra="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Discover new paths &amp;\nopportunities"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+
+                    <!-- Entrance Exams Card -->
+                    <LinearLayout
+                        android:id="@+id/entranceExamsCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_card_home"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_icon_circle_light"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_list_blue"
+                            android:importantForAccessibility="no"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Entrance\nExams"
+                            android:textColor="#111827"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:lineSpacingExtra="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Check dates, syllabus\n&amp; prepare"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <!-- Explore Jobs Card -->
+                    <LinearLayout
+                        android:id="@+id/jobsCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_card_home"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_icon_circle_light"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_briefcase_blue"
+                            android:importantForAccessibility="no"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Explore\nJobs"
+                            android:textColor="#111827"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Find market trends &amp;\nroles"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+
+                    <!-- Path Guidance Card -->
+                    <LinearLayout
+                        android:id="@+id/pathGuidanceCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_card_home"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_icon_circle_light"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_navigation_blue"
+                            android:importantForAccessibility="no"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Path\nGuidance"
+                            android:textColor="#111827"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:lineSpacingExtra="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Step-by-step career\nnavigation"
+                            android:textColor="#6B7280"
+                            android:textSize="12sp"
+                            android:lineSpacingExtra="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- AI POWERED TOOLS Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✨"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="AI POWERED TOOLS"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#6B7280"
+                    android:letterSpacing="0.05"/>
+            </LinearLayout>
+
+            <!-- AI Roadmap Generator Card -->
+            <LinearLayout
+                android:id="@+id/aiRoadmapCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card_ai_roadmap"
+                android:padding="20dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <FrameLayout
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_icon_circle_white_alpha">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_roadmap_white"
+                        android:importantForAccessibility="no"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Roadmap\nGenerator"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Generate a personalized timeline\nfor success."
+                        android:textColor="#E0E7FF"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right_white"
+                    android:importantForAccessibility="no"/>
+            </LinearLayout>
+
+            <!-- Career Recommendation Card -->
+            <LinearLayout
+                android:id="@+id/careerRecommendationCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card_ai_roadmap"
+                android:padding="20dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <FrameLayout
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_icon_circle_white_alpha">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_gear_settings_blue"
+                        app:tint="#FFFFFF"
+                        android:importantForAccessibility="no"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career\nRecommendation"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="AI analysis of your skills and\ninterests."
+                        android:textColor="#E0E7FF"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="2dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron_right_white"
+                    android:importantForAccessibility="no"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating AI Button -->
+    <ImageButton
+        android:id="@+id/btnAI"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_fab_blue"
+        android:src="@drawable/ic_chat_bot_white"
+        android:scaleType="centerInside"
+        android:padding="14dp"
+        android:elevation="6dp"
+        android:contentDescription="@string/ai_assistant"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home_filled_blue"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Home"
+                android:textColor="#2563EB"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Community -->
+        <LinearLayout
+            android:id="@+id/navCommunity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_community_gray"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Community"
+                android:textColor="#6B7280"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Saved -->
+        <LinearLayout
+            android:id="@+id/navSaved"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_bookmark_gray"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Saved"
+                android:textColor="#6B7280"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_person_gray"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Profile"
+                android:textColor="#6B7280"
+                android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

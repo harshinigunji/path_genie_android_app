@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Stream/Branch icon - fork/tree structure -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M17,16C17.55,16 18.08,16.08 18.58,16.22L14,11.65V8C14,6.9 13.1,6 12,6C10.9,6 10,6.9 10,8V11.65L5.42,16.22C5.92,16.08 6.45,16 7,16C9.26,16 11.18,17.28 12,19.15C12.82,17.28 14.74,16 17,16ZM7,18C5.35,18 4,19.35 4,21H10C10,19.35 8.65,18 7,18ZM17,18C15.35,18 14,19.35 14,21H20C20,19.35 18.65,18 17,18ZM12,4C13.1,4 14,3.1 14,2C14,0.9 13.1,0 12,0C10.9,0 10,0.9 10,2C10,3.1 10.9,4 12,4Z"/>
+</vector>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".OnboardingPage">
+
+    <ImageView
+        android:id="@+id/centerIllustration"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_onboarding_illustration"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/app_illustration" />
+
+    <TextView
+        android:id="@+id/titleEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Education "
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#111827"
+        app:layout_constraintTop_toBottomOf="@id/centerIllustration"
+        app:layout_constraintEnd_toStartOf="@id/titleStream"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/titleStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stream"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#3B82F6"
+        app:layout_constraintTop_toBottomOf="@id/centerIllustration"
+        app:layout_constraintStart_toEndOf="@id/titleEducation"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/titleAdvisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advisor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#3B82F6"
+        app:layout_constraintTop_toBottomOf="@id/titleEducation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chart Your Course,\nBuild Your Future"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="#6B7280"
+        app:layout_constraintTop_toBottomOf="@id/titleAdvisor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/indicatorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_dot_inactive"
+            android:layout_margin="6dp" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_dot_inactive"
+            android:layout_margin="6dp" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_dot_active"
+            android:layout_margin="6dp" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_dot_inactive"
+            android:layout_margin="6dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/getStartedButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Get Started  →"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@id/versionText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:id="@+id/versionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0.0"
+        android:textSize="12sp"
+        android:textColor="#9CA3AF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

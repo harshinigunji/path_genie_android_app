@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313173472870",
+    "project_id": "educationstreamadvisor",
+    "storage_bucket": "educationstreamadvisor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313173472870:android:040db70ff16ee4458edfa7",
+        "android_client_info": {
+          "package_name": "com.SIMATS.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVU5X0IniSkfbX3m5hBF5iAu2zneBUHKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

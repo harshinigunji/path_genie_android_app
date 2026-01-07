@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Education Stream Advisor</string>
+    <string name="app_illustration">Education Stream Advisor Illustration</string>
+    <string name="back_button">Go back</string>
+    <string name="app_logo">App Logo</string>
+    <string name="profile">Profile</string>
+    <string name="ai_assistant">AI Assistant</string>
+</resources>

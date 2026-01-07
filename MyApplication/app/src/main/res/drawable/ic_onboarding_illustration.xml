@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Main rounded container background -->
+    <path
+        android:fillColor="#F3F4F6"
+        android:pathData="M30,40 L170,40 Q180,40 180,50 L180,150 Q180,160 170,160 L30,160 Q20,160 20,150 L20,50 Q20,40 30,40 Z" />
+
+    <!-- Inner shadow/depth effect -->
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M40,50 L80,50 Q85,50 85,55 L85,85 Q85,90 80,90 L40,90 Q35,90 35,85 L35,55 Q35,50 40,50 Z" />
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M120,50 L160,50 Q165,50 165,55 L165,85 Q165,90 160,90 L120,90 Q115,90 115,85 L115,55 Q115,50 120,50 Z" />
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M40,110 L80,110 Q85,110 85,115 L85,145 Q85,150 80,150 L40,150 Q35,150 35,145 L35,115 Q35,110 40,110 Z" />
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M120,110 L160,110 Q165,110 165,115 L165,145 Q165,150 160,150 L120,150 Q115,150 115,145 L115,115 Q115,110 120,110 Z" />
+
+    <!-- Central blue circle with rocket icon -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M100,100m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0" />
+
+    <!-- Rocket/search icon inside circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,80 C95,80 91,84 91,89 L91,100 C91,102 92,104 94,105 L94,115 L100,112 L106,115 L106,105 C108,104 109,102 109,100 L109,89 C109,84 105,80 100,80 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M96,88 L104,88 L104,92 L96,92 Z" />
+
+    <!-- Graduation cap (top-left area) -->
+    <path
+        android:fillColor="#6B7280"
+        android:pathData="M57,65 L47,70 L57,75 L67,70 Z" />
+    <path
+        android:fillColor="#6B7280"
+        android:pathData="M50,72 L50,80 L57,83 L64,80 L64,72" />
+
+    <!-- Light bulb (bottom-left area) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M57,120 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M53,130 L61,130 L61,138 Q57,142 53,138 Z" />
+    <path
+        android:fillColor="#F3F4F6"
+        android:pathData="M54,133 L60,133 M54,136 L60,136" 
+        android:strokeColor="#F3F4F6"
+        android:strokeWidth="1" />
+
+    <!-- Book (bottom-right area) -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M130,130 L130,145 Q140,142 150,145 L150,130 Q140,127 130,130 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M130,130 L130,145 Q140,148 150,145 L150,130 Q140,133 130,130 Z" />
+
+    <!-- Chart/graph (top-right area) -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M130,55 L130,75 L135,75 L135,55 Z" />
+    <path
+        android:fillColor="#60A5FA"
+        android:pathData="M138,60 L138,75 L143,75 L143,60 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M146,50 L146,75 L151,75 L151,50 Z" />
+    
+    <!-- Trend line -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#3B82F6"
+        android:strokeWidth="2"
+        android:pathData="M130,70 Q140,55 155,45" />
+
+</vector>

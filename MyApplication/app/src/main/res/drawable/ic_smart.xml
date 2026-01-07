@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Smart/AI analysis icon - brain/sparkle -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M12,3L13.45,8.55L19,10L13.45,11.45L12,17L10.55,11.45L5,10L10.55,8.55L12,3Z"/>
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M19,15L19.95,18.05L23,19L19.95,19.95L19,23L18.05,19.95L15,19L18.05,18.05L19,15Z"/>
+</vector>

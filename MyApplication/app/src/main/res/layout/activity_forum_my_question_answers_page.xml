@@ -1,0 +1,147 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FAFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Answers to My Question"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A"/>
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Delete Question"
+            app:tint="#EF4444"/> <!-- Red tint for danger -->
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- Your Question Card -->
+            <LinearLayout
+                android:id="@+id/questionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="16dp">
+
+                <!-- Your Question Badge -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_tab_selected"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="YOUR QUESTION"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#2563EB"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtQuestionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Question title here"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"/>
+
+                <TextView
+                    android:id="@+id/txtQuestionDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Question description here"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:lineSpacingExtra="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtQuestionDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="📅 Posted on Oct 24, 2023"
+                    android:textSize="12sp"
+                    android:textColor="#94A3B8"/>
+
+            </LinearLayout>
+
+            <!-- Answers Header -->
+            <TextView
+                android:id="@+id/txtAnswersHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Answers (0)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"/>
+
+            <!-- Answers Container -->
+            <LinearLayout
+                android:id="@+id/answersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <!-- Answers loaded dynamically -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

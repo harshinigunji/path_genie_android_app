@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF"
+    tools:context=".JobDetailsPage">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:id="@+id/contentScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Job Type Badge -->
+            <LinearLayout
+                android:id="@+id/jobTypeBadgeContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_chip_light"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/jobTypeIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_building" />
+
+                <TextView
+                    android:id="@+id/jobTypeBadge"
+                    android:text="GOVERNMENT"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#2563EB"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Job Name -->
+            <TextView
+                android:id="@+id/jobName"
+                android:text="IES Officer"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Job Subtitle -->
+            <TextView
+                android:id="@+id/jobSubtitle"
+                android:text="Indian Engineering Services (Class A)"
+                android:textSize="16sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Job Overview Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_briefcase"
+                        app:tint="#2563EB" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Job Overview"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/overviewText"
+                    android:text="Loading job overview..."
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Responsibilities Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_skill"
+                        app:tint="#8B5CF6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Responsibilities"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/responsibilitiesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Required Education Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="REQUIRED EDUCATION"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#6B7280" />
+
+                <TextView
+                    android:id="@+id/requiredEducation"
+                    android:text="Engineering Degree (B.E./B.Tech)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#111827"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/educationDetails"
+                    android:text="Specific specializations required"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Skills Needed Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_skill" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skills Needed"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:id="@+id/skillsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:columnCount="3"
+                    android:useDefaultMargins="true" />
+            </LinearLayout>
+
+            <!-- Career Growth Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_success"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_trend"
+                        app:tint="#059669" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career Growth"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#065F46"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/careerGrowthText"
+                    android:text="High job security and prestige. Career progression moves from technical execution to strategic leadership roles."
+                    android:textSize="14sp"
+                    android:textColor="#065F46"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/careerPathContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Button -->
+    <Button
+        android:id="@+id/bottomButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="🚀  Generate Roadmap"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+                android:background="@drawable/bg_primary_button"
+                app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

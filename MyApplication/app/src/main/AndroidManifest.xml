@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Network Permission for API calls -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Push Notification Permission for Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".NotificationsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ForumMyQuestionsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ForumQuestionDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ForumMyQuestionAnswersPage"
+            android:exported="false" />
+        <activity
+            android:name=".ForumAskQuestionPage"
+            android:exported="false" />
+        <activity
+            android:name=".ForumHomePage"
+            android:exported="false" />
+        <activity
+            android:name=".CareerRecommendationPage"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationLoadingPage"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationP4Page"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationP3Page"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationP2Page"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationP1Page"
+            android:exported="false" />
+        <activity
+            android:name=".RecommendationSplashPage"
+            android:exported="false" />
+        <activity
+            android:name=".NextStreamsListDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".NextStreamsListPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamsListDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamsListPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamsEducationLevelsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreansEducationLevelsPage"
+            android:exported="false" />
+        <activity
+            android:name=".EducationLevelJobDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".EducationLevelJobsPage"
+            android:exported="false" />
+        <activity
+            android:name=".JobsEducationLevelsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ExamsEducationLevelsPage"
+            android:exported="false" />
+        <activity
+            android:name=".AiAssistantPage"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePasswordPage"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfilePage"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
+            android:name=".SavedFullRoadmapPage"
+            android:exported="false" />
+        <activity
+            android:name=".SavedRoadmapListPage"
+            android:exported="false" />
+        <activity
+            android:name=".SystemRoadmapSavedPage"
+            android:exported="false" />
+        <activity
+            android:name=".SystemGeneratePage"
+            android:exported="false" />
+        <activity
+            android:name=".SystemRoadmapPage"
+            android:exported="false" />
+        <activity
+            android:name=".GenerationPage"
+            android:exported="false" />
+        <activity
+            android:name=".SystemGenerateP4Page"
+            android:exported="false" />
+        <activity
+            android:name=".SystemGenerateP3Page"
+            android:exported="false" />
+        <activity
+            android:name=".SystemGenerateP2Page"
+            android:exported="false" />
+        <activity
+            android:name=".SystemGenerateP1Page"
+            android:exported="false" />
+        <activity
+            android:name=".UserGeneratePage"
+            android:exported="false" />
+        <activity
+            android:name=".UserRoadmapSuccessPage"
+            android:exported="false" />
+        <activity
+            android:name=".UserRoadmapPage"
+            android:exported="false" />
+        <activity
+            android:name=".JobDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".JobsPage"
+            android:exported="false" />
+        <activity
+            android:name=".LevelExamsPage"
+            android:exported="false" />
+        <activity
+            android:name=".NextStreamSuggestionsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamSuggestionsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ExamAddedConfirmationPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamExamAddedSuccessPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamExamDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamExamsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ELEAddedSucessfullyPage"
+            android:exported="false" />
+        <activity
+            android:name=".EducationLevelExamDetailsPage"
+            android:exported="false" />
+        <activity
+            android:name=".EducationLevelExamsPage"
+            android:exported="false" />
+        <activity
+            android:name=".StreamsPage"
+            android:exported="false" /> <!-- Education Levels Page -->
+        <activity
+            android:name=".EducationLevelsPage"
+            android:exported="false" /> <!-- Onboarding Page - Launcher Activity -->
+        <activity
+            android:name=".OnboardingPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Home Page -->
+        <activity
+            android:name=".HomePage"
+            android:exported="false" /> <!-- Register Page -->
+        <activity
+            android:name=".RegisterPage"
+            android:exported="false" /> <!-- Login Page -->
+        <activity
+            android:name=".LoginPage"
+            android:exported="false" /> <!-- Dashboard Activity -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" /> <!-- Main Activity (kept for reference) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoadmapErrorActivity"
+            android:exported="false" />
+        
+        <!-- Firebase Cloud Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

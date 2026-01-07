@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!-- Stream Icon -->
+    <ImageView
+        android:id="@+id/streamIcon"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_science"
+        android:background="@drawable/bg_icon_circle_light"
+        android:padding="10dp"
+        app:tint="#2563EB"
+        android:layout_centerVertical="true" />
+
+    <!-- Stream Info -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/streamIcon"
+        android:layout_toStartOf="@id/arrowIcon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+            android:id="@+id/streamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science (PCM)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/streamDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Engineering &amp; technical focus"
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Arrow Icon -->
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_right"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:tint="#3B82F6" />
+
+    <!-- Most Relevant Badge (optional, controlled programmatically) -->
+    <TextView
+        android:id="@+id/relevantBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="MOST RELEVANT"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_chip_primary"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

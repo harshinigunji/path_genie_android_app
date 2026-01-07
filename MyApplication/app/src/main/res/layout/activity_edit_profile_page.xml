@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            app:tint="#111827"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Edit Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#111827"/>
+
+        <TextView
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Loading Progress -->
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Scroll Content -->
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Profile Image -->
+            <FrameLayout
+                android:id="@+id/profileImageContainer"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="70dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_avatar"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/bg_circle"
+                        android:padding="0dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:id="@+id/btnCamera"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/bg_icon_circle_blue_light"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_camera"
+                        app:tint="#2563EB"/>
+                </FrameLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/btnChangePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:text="Change Profile Photo"
+                android:textColor="#2563EB"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <!-- Basic Info Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Basic Information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"/>
+
+            <!-- Full Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Enter your full name"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:inputType="textPersonName"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Enter your email"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Phone -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Enter your phone number"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:inputType="phone"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Date of Birth -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Select your date of birth"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Education Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Education &amp; Career"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111827"/>
+
+            <!-- Education Level -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Education Level"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etEducationLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="e.g. 12th Science"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_education"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Current School -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current School/College"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Enter your school name"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_school"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Board -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Board"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="e.g. CBSE, ICSE"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_education"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Aspiring Career -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aspiring Career"
+                    android:textStyle="bold"
+                    android:textColor="#374151"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/etAspiringCareer"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="e.g. Software Engineer"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@drawable/ic_career"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="#2563EB"
+                    android:textColor="#111827"/>
+            </LinearLayout>
+
+            <!-- Change Password Option -->
+            <LinearLayout
+                android:id="@+id/cardChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_card_white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_icon_circle_blue_light">
+                    
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_lock"
+                        app:tint="#2563EB"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#111827"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update your security"
+                        android:textSize="12sp"
+                        android:textColor="#6B7280"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="#9CA3AF"/>
+            </LinearLayout>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Save Changes"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_login_button_custom"
+                app:backgroundTint="@null"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

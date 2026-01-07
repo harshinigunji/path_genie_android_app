@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp">
+
+    <!-- Top Row: Category and Arrow -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/jobCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="UNION PUBLIC SERVICE COMMISSION"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#2563EB" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#2563EB" />
+    </LinearLayout>
+
+    <!-- Job Name -->
+    <TextView
+        android:id="@+id/jobName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IES Officer"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#111827"
+        android:layout_marginTop="4dp" />
+
+    <!-- Job Description -->
+    <TextView
+        android:id="@+id/jobDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Indian Engineering Services – prestigious civil service roles."
+        android:textSize="14sp"
+        android:textColor="#6B7280"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tag Chip -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_chip_light"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:id="@+id/tagIcon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_building"
+            app:tint="#6B7280" />
+
+        <TextView
+            android:id="@+id/jobTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Central Govt"
+            android:textSize="12sp"
+            android:textColor="#6B7280"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

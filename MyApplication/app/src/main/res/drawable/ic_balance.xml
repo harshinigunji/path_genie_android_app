@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Balance/Scale icon for Medium -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M12,3c-0.55,0 -1,0.45 -1,1v1H6.83l0.88,4H3v2h2.18l1.27,5.72C6.56,17.14 7.1,18 7.67,18h8.66c0.57,0 1.11,-0.86 1.22,-1.28L18.82,11H21V9h-4.71l0.88,-4H12V4C12,3.45 11.55,3 12,3zM8.08,16l-0.89,-4h9.62l-0.89,4H8.08zM14.5,6.5l-0.5,-2.25L13.5,6.5H10.5L10,4.25L9.5,6.5H14.5z"/>
+</vector>

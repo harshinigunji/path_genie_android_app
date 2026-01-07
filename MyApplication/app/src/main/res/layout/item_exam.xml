@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_white"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!-- Category Badge -->
+    <TextView
+        android:id="@+id/examBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:text="Diploma Admission"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:background="@drawable/bg_chip_blue"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center" />
+
+    <!-- Exam Name -->
+    <TextView
+        android:id="@+id/examName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Polytechnic Common Entrance Test (POLYCET)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#111827"
+        android:layout_marginTop="12dp" />
+
+    <!-- Conducting Body -->
+    <TextView
+        android:id="@+id/conductingBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State Board of Tech Education"
+        android:textSize="14sp"
+        android:textColor="#6B7280"
+        android:layout_marginTop="4dp" />
+
+    <!-- View Details Link -->
+    <TextView
+        android:id="@+id/viewDetailsLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Details  →"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#2563EB"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
